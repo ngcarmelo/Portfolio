@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import {Contact } from '../../models/contact';
 import { ContactService } from '../../services/contact.service';
-import { UserService } from '../../services/user.service';
+// import { UserService } from '../../services/user.service';
 
 
  //declare var jQuery:any;
@@ -12,7 +12,9 @@ import { UserService } from '../../services/user.service';
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
-  providers: [ContactService, UserService]
+  // providers: [ContactService, UserService]
+  providers: [ContactService]
+
 
 })
 export class ContactComponent implements OnInit {
@@ -27,11 +29,11 @@ export class ContactComponent implements OnInit {
     private _route: ActivatedRoute,
     private _router: Router,
     private _contactService: ContactService,
-     private _userService: UserService
+     // private _userService: UserService
     )
 
      {
-       this.contact = new Contact('','','','','','');
+        this.contact = new Contact('','','','','','');
       	this.title = "Enviar Mensaje";
    }
 
